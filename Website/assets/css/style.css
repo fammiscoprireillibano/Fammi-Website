@@ -88,6 +88,24 @@ p  { font-size: 18px; }
   transform-origin: left center;
 }
 
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.burger span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: #ffffff;
+  margin: 5px 0;
+  border-radius: 2px;
+}
+
+
 /* MENU */
 .nav {
   display: flex;
@@ -555,9 +573,34 @@ p  { font-size: 18px; }
     text-align: center;
   }
 
-  nav {
-    flex: 1 1 100%;
-    justify-content: center;
+  /* show burger */
+  .burger {
+    display: block;
+  }
+
+  /* hide nav by default */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(#0b3a2a, #062419);
+    flex-direction: column;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav a {
+    padding: 14px 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #fff;
+  }
+
+  /* show nav when active */
+  .nav.active {
+    display: flex;
   }
 
   .lang-switch {

@@ -1,0 +1,338 @@
+html {
+  scroll-behavior: smooth;
+}
+/* =========================
+   INTRO
+========================= */
+.tours-intro {
+  padding: 80px 0;
+  background: var(--sand-light);
+  text-align: center;
+}
+
+.tours-intro p {
+  max-width: 700px;
+  margin: auto;
+  font-size: 18px;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+.how-it-works {
+  background: linear-gradient(to top, var(--sand-light), var(--paper-white));
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 80px 0;
+}
+
+.h2-tours {
+  background: linear-gradient(
+    to top,
+    var(--sand-light),
+    var(--sand-soft)
+  );
+  padding-top: 50px;
+}
+
+/* =========================
+   CTA
+========================= */
+.tours-cta {
+  padding: 80px 0;
+  text-align: center;
+    background:
+    linear-gradient(
+      rgba(255,255,255,0.9),
+      rgba(255,255,255,0.95)
+    ),
+    url("../img/tours/7.jpg") center / cover no-repeat fixed;
+}
+
+.tours-cta p {
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+
+.contact-hero {
+	background: 
+	linear-gradient(to right, rgba(244, 226, 200, 0.85), rgba(255, 255, 255, 0.85)),
+	url("../img/tours/bekaa.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 110px 0 70px;
+	text-align: center;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 
+	            4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 110px 0 70px;
+	text-align: center;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-hero p{
+	color: var(--header-green-light);
+}
+
+/* =========================
+   TOURS CULTURE INTRO
+========================= */
+/* =========================
+   CULTURE EDITORIAL HEADING
+========================= */
+.culture-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 40px;
+  position: relative;
+}
+
+.culture-heading p {
+  font-size: 18px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.tours-culture {
+  margin-bottom:50px;
+}
+
+.tours-culture p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 18px;
+   max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.culture-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: center;
+  margin-top: 40px;
+  
+}
+
+/* TEXT */
+
+.culture-text {
+  background: var(--paper-white);
+  padding: 48px 52px;
+  border-radius: 28px;
+  box-shadow: 
+    0 20px 45px rgba(0,0,0,0.06),
+    inset 0 0 0 1px rgba(0,0,0,0.02);
+}
+
+.culture-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--header-green-light);
+  margin-bottom: 18px;
+  max-width: 640px;
+}
+
+.culture-map {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.culture-map img {
+  position: relative;
+  max-width: 360px;   /* 👈 THIS is the key */
+  width: 100%;
+  height: auto;
+    border-radius: 28px;
+  box-shadow: 
+    0 20px 45px rgba(0,0,0,0.06),
+    inset 0 0 0 1px rgba(0,0,0,0.02);
+}
+
+/* =========================
+   REGIONS STRIP
+========================= */
+.regions-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  margin: 0 0;
+}
+
+.region-card {
+  position: relative;
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+}
+/* Overlay */
+.region-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.15)
+  );
+  transition: background 0.4s ease;
+}
+
+/* Title */
+.region-card span {
+  position: absolute;
+  bottom: 18px;
+  left: 18px;
+  z-index: 2;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.6px;
+  transition: transform 0.4s ease;
+}
+/* Hover effects */
+.region-card:hover {
+  transform: scale(1.02);
+}
+
+.region-card:hover::after {
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.25)
+  );
+}
+
+.region-card:hover span {
+  transform: translateY(-6px);
+}
+/* Soft arrow cue */
+.region-card span::after {
+  content: " →";
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.region-card:hover span::after {
+  opacity: 1;
+}
+
+.region-card:focus-visible {
+  outline: 3px solid var(--green-primary);
+  outline-offset: -3px;
+}
+
+
+/* =========================
+   TOURS TABLE
+========================= */
+.tours-table-section {
+  background: var(--sand-soft);
+  padding: 80px 0;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.tours-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper-white);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+}
+
+.tours-table th,
+.tours-table td {
+  padding: 18px 20px;
+  vertical-align: top;
+  text-align: left;
+}
+
+.tours-table thead {
+  background: linear-gradient(
+    to right,
+    var(--green-soft),
+    #f1f7f3
+  );
+}
+
+.tours-table th {
+  font-family: 'Merriweather', serif;
+  color: var(--green-dark);
+  font-size: 18px;
+}
+
+.tours-table td {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.tours-table tbody tr:hover {
+  background: #f6faf8;
+}
+
+.tours-table tbody tr:nth-child(even) {
+  background: #fafafa;
+}
+
+.tour-card {
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.tour-card img {
+  transition: transform 0.4s ease;
+}
+
+.tour-card:hover img {
+  transform: scale(1.04);
+}
+
+
+
+/* =========================
+   MOBILE TABLE FIX
+========================= */
+@media (max-width: 768px) {
+  .tours-table th,
+  .tours-table td {
+    font-size: 15px;
+    padding: 14px 16px;
+  }
+  
+    .regions-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .region-card:hover {
+    transform: none;
+  }
+
+  .region-card span::after {
+    opacity: 1;
+  }
+  
+    .culture-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .culture-text {
+    padding: 32px 24px;
+  }
+
+  .culture-map img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,194 @@
+
+.about h2,.about-highlight h3,
+.about-identity h3,
+.about-method h3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  font-family: 'Merriweather', serif;
+  font-size: 32px;
+  color: var(--header-green-light);
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;  
+}
+
+.about-method h3::before,
+.about-method h3::after,
+.about-identity h3::before,
+.about-identity h3::after,
+.about-highlight h3::before,
+.about-highlight h3::after,
+.about h2::before,
+.about h2::after {
+  content: "";
+  flex: 1;
+  max-width: 120px;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--green-primary),
+    transparent
+  );
+}
+
+.contact-hero {
+	background: 
+		linear-gradient(to right, rgba(244, 226, 200, 0.85), rgba(255, 255, 255, 0.85)),
+		url("../img/tours/jaj.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 110px 0 70px;
+	text-align: center;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 
+	            4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.contact-hero p{
+	color: var(--header-green-light);
+}
+
+/* STORY CARD */
+.story-card {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 56px 48px;
+  margin-bottom: 60px;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(0,0,0,0.06);
+}
+
+.about {
+	margin-top: 50px;
+}
+
+.about p {
+  font-size: 18px;
+  line-height: 1.85;
+  color: var(--header-green-light);
+}
+
+.about .lead {
+  font-size: 20px;
+  font-style: Italic;
+  color: var(--green-primary);
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* HIGHLIGHT */
+.about-highlight {
+  background: linear-gradient(to right, var(--green-soft), var(--paper-white));
+  padding: 60px 0;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about-highlight p {
+  color: var(--header-green-light);
+}
+
+.about-highlight blockquote {
+  margin-top: 30px;
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  font-style: italic;
+  padding-left: 32px;
+  position: relative;
+    color: var(--green-primary);
+}
+
+.about-highlight blockquote::before {
+  content: "❝";
+  position: absolute;
+  left: 0;
+  top: -10px;
+  font-size: 40px;
+  color: var(--green-primary);
+}
+
+/* IDENTITY */
+.about-identity {
+  padding: 60px 0;
+  background: var(--sand-soft);
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.identity-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.identity-grid div {
+  background: var(--paper-white);
+  padding: 22px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+}
+
+/* METHOD */
+.about-method {
+  padding: 20px 0;
+  
+}
+
+.about-method ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.about-method li {
+  padding-left: 34px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.about-method li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--green-primary);
+  font-weight: 700;
+}
+
+/* CLOSING */
+.about-closing {
+  padding: 50px 0;
+  text-align: center;
+  	background: 
+		linear-gradient(to right, rgba(244, 226, 200, 0.85), rgba(255, 255, 255, 0.85)),
+		url("../img/tours/monte_libano.png");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.closing-line {
+  font-family: 'Merriweather', serif;
+  font-size: 26px;
+  color: var(--green-dark);
+  margin-bottom: 36px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .story-card {
+    padding: 32px 22px;
+  }
+
+  .identity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .closing-line {
+    font-size: 22px;
+  }
+  .lead{
+	font-size: 15px;
+  }
+}

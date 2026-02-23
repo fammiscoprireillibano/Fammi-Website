@@ -3,148 +3,187 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Fammi Scoprire il Libano – Coming Soon</title>
+  <title>Fammi Scoprire il Libano</title>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  
+    <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/img/logo/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/img/logo/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo/favicon.png">
 
-  <style>
-    :root {
-      --green-dark: #0b1f16;
-      --green-primary: #0f8f4f;
-      --sand: #f4f1ec;
-      --text: #1a1a1a;
-    }
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    * { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      min-height: 100vh;
-      font-family: 'Inter', sans-serif;
-      background:
-        linear-gradient(
-          to right,
-          rgba(244,241,236,0.96),
-          rgba(244,241,236,0.85)
-        ),
-        url("assets/img/hero/10.png");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .coming-box {
-      background: var(--green-dark);
-      color: white;
-      padding: 48px 36px;
-      border-radius: 26px;
-      max-width: 560px;
-      width: 100%;
-      box-shadow: 0 20px 50px rgba(0,0,0,0.15);
-    }
-
-    .logo {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 24px;
-      font-weight: 700;
-    }
-
-    .logo img {
-      height: 46px;
-    }
-
-    h1 {
-      font-family: 'Merriweather', serif;
-      font-size: 34px;
-      color: white;
-      margin-bottom: 16px;
-    }
-
-    .lang-block {
-      margin-bottom: 24px;
-    }
-
-    .lang-block p {
-      color: var(--sand);
-    }
-
-    p {
-      font-size: 18px;
-      color: var(--sand);
-      line-height: 1.6;
-      margin: 0;
-    }
-
-    .badge {
-      display: inline-block;
-      background: var(--green-primary);
-      color: white;
-      padding: 10px 24px;
-      border-radius: 999px;
-      font-weight: 700;
-      font-size: 16px;
-      margin-top: 24px;
-    }
-
-    footer {
-      margin-top: 28px;
-      font-size: 14px;
-      color: #777;
-    }
-  </style>
 </head>
 
 <body>
 
-  <div class="coming-box">
+<header class="header">
+  <div class="container header-inner">
 
-    <div class="logo">
-      <img src="assets/img/logo/logo_png.png" alt="Fammi Scoprire il Libano">
+    <!-- LEFT: LOGO -->
+    <a href="index.html" class="logo">
+      <img src="../assets/img/logo/Logo_png.png" alt="Fammi Scoprire il Libano logo">
       <span>Fammi Scoprire il Libano</span>
+    </a>
+	
+	<!-- BURGER BUTTON (mobile only) -->
+	<button class="burger" aria-label="Menu">
+	  <span></span>
+	  <span></span>
+	  <span></span>
+	</button>
+
+    <!-- CENTER: MENU -->
+    <nav class="nav">
+      <a href="../index.html" class="active">Casa</a>
+      <a href="../it/Chi-siamo/about.html">Chi Siamo</a>
+      <a href="../it/tour/tour.html">Tour</a>
+      <a href="../it/contatti/contatti.html">Contatti</a>
+    </nav>
+
+    <!-- RIGHT: LANGUAGE -->
+    <div class="lang-switch">
+      <a href="index.html" class="active">IT</a>
+      <span>|</span>
+      <a href="/en/index.html">EN</a>
     </div>
-
-    <h1>Coming Soon!</h1>
-
-    <!-- ITALIAN -->
-    <div class="lang-block">
-      <p>
-        Il nostro nuovo sito è in fase di preparazione.<br>
-        Presto potrai scoprire il Libano con calma,
-        sicurezza e autenticità.
-      </p>
-    </div>
-
-    <!-- ENGLISH -->
-    <div class="lang-block">
-      <p>
-        Our new website is currently under construction.<br>
-        Soon you will be able to discover Lebanon with calm,
-        safety and authenticity.
-      </p>
-    </div>
-
-    <footer>
-      © 2026 Fammi Scoprire il Libano
-    </footer>
 
   </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+  <!-- HERO BACKGROUND SLIDES -->
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image: url('assets/img/hero/10.png');"></div>
+    <div class="hero-slide" style="background-image: url('assets/img/tours/7.jpg');"></div>
+    <div class="hero-slide" style="background-image: url('assets/img/tours/8.jpg');"></div>
+	<div class="hero-slide" style="background-image: url('assets/img/tours/5.jpg');"></div>
+	<div class="hero-slide" style="background-image: url('assets/img/tours/chouwen.jpg');"></div>
+	<div class="hero-slide" style="background-image: url('assets/img/tours/Iaat.jpg');"></div>
+	<div class="hero-slide" style="background-image: url('assets/img/tours/Aaqoura.jpg');"></div>
+	<div class="hero-slide" style="background-image: url('assets/img/tours/kefraya.jpg');"></div>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-content">
+      <h1>
+        Scopri il Libano<br>
+        con calma, sicurezza<br>
+        e autenticità
+      </h1>
+
+      <p>
+        Tour pensati anche per senior.<br>
+        Lasciati guidare dalla nostra esperienza.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="btn primary" href="../it/tour/tour.html">Scopri i Tour</a>
+        <a class="btn secondary whatsapp-btn"
+           href="https://wa.me/+9613244809"
+           target="_blank">
+          <img src="assets/img/icons/whatsapp.png" alt="WhatsApp">
+          Parla con noi
+        </a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- VALUE PROPS -->
+<section class="values">
+  <div class="container">
+
+    <!-- SECTION TITLE -->
+    <h2 class="section-title">I nostri valori</h2>
+
+    <!-- VALUES GRID -->
+    <div class="values-grid">
+      <div class="value-card">
+        <img src="assets/img/icons/cedar_tree.png" class="value-icon" alt="Cedar of Lebanon icon">
+        <h3>autenticità</h3>
+        <p>Scopri la vera cultura del Libano.</p>
+      </div>
+
+      <div class="value-card">
+        <img src="assets/img/icons/location.png" class="value-icon" alt="Security icon">
+        <h3>sicurezza</h3>
+        <p>Guide locali, esperienze senza stress.</p>
+      </div>
+
+      <div class="value-card">
+        <img src="assets/img/icons/tour.png" class="value-icon" alt="Human-centered travel icon">
+        <h3>Umanità</h3>
+        <p>Viaggi lenti, personalizzati e curati.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- TOURS -->
+<section class="tours">
+  <div class="container">
+    <h2 class="section-title">Alcuni dei nostri tour in Libano</h2>
+
+    <div class="tour-grid">
+      <div class="tour-card">
+        <img src="assets/img/tours/8.jpg" alt="">
+        <h3>Beirut Culturale</h3>
+        <p>Esplora la capitale tra storia, arte e sapori.</p>
+        <a href="../it/tour/tour.html" class="btn small">Scopri di più</a>
+      </div>
+
+      <div class="tour-card">
+        <img src="assets/img/tours/3.jpg" alt="">
+        <h3>Byblos e la Costa</h3>
+        <p>Uno dei porti più antichi del mondo.</p>
+        <a href="../it/tour/tour.html" class="btn small">Scopri di più</a>
+      </div>
+
+      <div class="tour-card">
+        <img src="assets/img/tours/5.jpg" alt="">
+        <h3>Vino e Tradizioni nella Bekaa</h3>
+        <p>Vigneti, storia e sapori autentici.</p>
+        <a href="../it/tour/tour.html" class="btn small">Scopri di più</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEW -->
+<section class="review">
+  <div class="container review-box">
+    <p class="quote">
+      “Un viaggio indimenticabile nella storia e nella cultura del Libano.”
+    </p>
+    <p class="author">— Anna, Germania 🇩🇪</p>
+
+    <a class="btn primary" href="../it/contatti/contatti.html">Contattaci</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-inner">
+	<div class="footer-brand">
+      <img src="assets/img/logo/logo_png.png" alt="Fammi Scoprire il Libano logo">
+    </div>
+    <p>© Copyright 2026 Fammi Scoprire il Libano - All Right Reserved.</p>
+  </div>
+</footer>
+
+<script src="assets/js/hero-carousel.js"></script>
+<script src="assets/js/menu.js"></script>
+
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-

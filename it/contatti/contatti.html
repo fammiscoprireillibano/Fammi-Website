@@ -114,250 +114,240 @@
 </section>
 
 <!-- QUESTIONNAIRE -->
+<!-- QUESTIONNAIRE -->
 <section class="form-wrapper">
-	<div class="form-container">
-		<section class="form-hero">
-		  <h2 class="section-title">Organizziamo insieme il tuo viaggio ideale</h2>
-		  <p>
-			Compila questo breve questionario.<br>
-			Ci aiuterà a creare un’esperienza autentica, sicura e su misura per te.
-		  </p>
-		</section>
+  <div class="form-container">
 
-		<section class="form-card">
-		  <h3>👤 Informazioni personali</h3>
+    <section class="form-hero">
+      <h2 class="section-title">Organizziamo insieme il tuo viaggio ideale</h2>
+      <p>
+        Compila questo breve questionario.<br>
+        Ci aiuterà a creare un’esperienza autentica, sicura e su misura per te.
+      </p>
+    </section>
 
-		  <div class="form-grid">
-			<div class="field">
-			  <label>Nome e cognome</label>
-			  <input type="text" placeholder="Es. Mario Rossi" required>
-			</div>
+    <!-- NETLIFY FORM START -->
+    <form name="contact-questionnaire"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field">
 
-			<div class="field">
-			  <label>Email</label>
-			  <input type="email" placeholder="esempio@email.com" required>
-			</div>
+      <!-- Required hidden input -->
+      <input type="hidden" name="form-name" value="contact-questionnaire">
 
-			<div class="field">
-			  <label>Telefono / WhatsApp</label>
-			  <input type="tel" placeholder="inserisci il numero di telefono" required>
-			</div>
+      <!-- Honeypot anti-spam -->
+      <p style="display:none;">
+        <label>Non compilare questo campo se sei umano:
+          <input name="bot-field">
+        </label>
+      </p>
 
-			<div class="field">
-			  <label>Lingua preferita</label>
-			  <select>
-				<option>Italiano</option>
-				<option>English</option>
-				<option>Altro</option>
-			  </select>
-			</div>
-		  </div>
-		</section>
-		<section class="form-card">
-		  <h3>👥 Il tuo gruppo e le date</h3>
+      <!-- 👤 Informazioni personali -->
+      <section class="form-card">
+        <h3>👤 Informazioni personali</h3>
 
-		  <div class="form-grid">
-			<div class="field">
-			  <label>Tipo di viaggio</label>
-			  <select>
-				<option>Solo</option>
-				<option>Coppia</option>
-				<option>Famiglia</option>
-				<option>Amici</option>
-				<option>Gruppo organizzato</option>
-			  </select>
-			</div>
-		  
-			<div class="field">
-			  <label>Numero totale di viaggiatori</label>
-			  <input type="number" min="1" required>
-			</div>
+        <div class="form-grid">
+          <div class="field">
+            <label>Nome e cognome</label>
+            <input type="text" name="full_name" placeholder="Es. Mario Rossi" required>
+          </div>
 
-			<div class="field">
-			  <label>Numero di adulti</label>
-			  <input type="number" required>
-			</div>
-			
-			<div class="field">
-			  <label>Età degli adulti</label>
-			  <input type="text" placeholder="Es. 35, 45, due hanno settantacinque anni..." required>
-			</div>
-			
-			<div class="field">
-			  <label>Numero di bambini</label>
-			  <input type="number">
-			</div>
+          <div class="field">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="esempio@email.com" required>
+          </div>
 
-			<div class="field">
-			  <label>Età degli Bambini</label>
-			  <input type="text" placeholder="Es. 8, 12">
-			</div>
+          <div class="field">
+            <label>Telefono / WhatsApp</label>
+            <input type="tel" name="phone" placeholder="inserisci il numero di telefono" required>
+          </div>
 
-			
-		  </div>
-		</section>
-		
+          <div class="field">
+            <label>Lingua preferita</label>
+            <select name="language">
+              <option>Italiano</option>
+              <option>English</option>
+              <option>Altro</option>
+            </select>
+          </div>
+        </div>
+      </section>
 
-		<section class="form-card">
-		  <h3>✨ Cosa ti interessa di più? <h5>(Puoi scegliere più opzioni)</h5></h3>
+      <!-- 👥 Gruppo -->
+      <section class="form-card">
+        <h3>👥 Il tuo gruppo e le date</h3>
 
-			<div class="interest-group">
-			  <label class="checkbox-card">
-				<input type="checkbox" name="interest[]" value="Cultura & tradizioni">
-				<span>Cultura & tradizioni</span>
-			  </label>
-			  <label class="checkbox-card">
-				<input type="checkbox" name="interest[]" value="Natura & paesaggi">
-				<span>Natura & paesaggi</span>
-			  </label>
+        <div class="form-grid">
+          <div class="field">
+            <label>Tipo di viaggio</label>
+            <select name="trip_type">
+              <option>Solo</option>
+              <option>Coppia</option>
+              <option>Famiglia</option>
+              <option>Amici</option>
+              <option>Gruppo organizzato</option>
+            </select>
+          </div>
 
-			  <label class="checkbox-card">
-				<input type="checkbox" name="interest[]" value="Storia & archeologia">
-				<span>Storia & archeologia</span>
-			  </label>
-			  <label class="checkbox-card">
-				<input type="checkbox" name="interest[]" value="Pellegrinaggio cristiano">
-				<span>Pellegrinaggio cristiano</span>
-			  </label>
-			  <label class="checkbox-card">
-				<input type="checkbox" name="interest[]" value="Gastronomia">
-				<span>Cucina & tradizioni locali</span>
-			  </label>
+          <div class="field">
+            <label>Numero totale di viaggiatori</label>
+            <input type="number" name="total_travelers" min="1" required>
+          </div>
 
-			  <label class="checkbox-card">
-				<input type="checkbox" name="interest[]" value="Esperienza mista">
-				<span>Esperienza completa</span>
-			  </label>
-			</div>
-		</section>
-		
-		<section class="form-card">
-		  <h3>✈️ Arrivo, partenza e alloggio</h3>
+          <div class="field">
+            <label>Numero di adulti</label>
+            <input type="number" name="adults" required>
+          </div>
 
-		  <div class="form-grid">
-			<!-- Arrival -->
-			<div class="field">
-			  <label>Data di arrivo</label>
-			  <input type="date" name="arrival_date" required>
-			</div>
+          <div class="field">
+            <label>Età degli adulti</label>
+            <input type="text" name="adult_ages" required>
+          </div>
 
-			<div class="field">
-			  <label>Orario di arrivo</label>
-			  <input type="time" name="arrival_time" required>
-			</div>
+          <div class="field">
+            <label>Numero di bambini</label>
+            <input type="number" name="children">
+          </div>
 
-			<!-- Departure -->
-			<div class="field">
-			  <label>Data di partenza</label>
-			  <input type="date" name="departure_date" required>
-			</div>
+          <div class="field">
+            <label>Età dei bambini</label>
+            <input type="text" name="children_ages">
+          </div>
+        </div>
+      </section>
 
-			<div class="field">
-			  <label>Orario di partenza</label>
-			  <input type="time" name="departure_time" required>
-			</div>
+      <!-- ✨ Interessi -->
+      <section class="form-card">
+        <h3>✨ Cosa ti interessa di più?</h3>
 
-			<!-- Airport -->
-<!-- 			<div class="field" style="grid-column: 1 / -1;">
-			  <label>Aeroporto di arrivo / partenza</label>
-			  <input
-				type="text"
-				name="airport"
-				placeholder="Es. Beirut International Airport"
-				required
-			  >
-			</div> -->
-		  </div>
+        <div class="interest-group">
+          <label class="checkbox-card">
+            <input type="checkbox" name="interest[]" value="Cultura & tradizioni">
+            Cultura & tradizioni
+          </label>
 
-		  <!-- Accommodation -->
-		  <div style="margin-top: 28px;">
-			<label style="font-weight: 600; display: block; margin-bottom: 12px;">
-			  🏨 Tipo di alloggio preferito
-			</label>
+          <label class="checkbox-card">
+            <input type="checkbox" name="interest[]" value="Natura & paesaggi">
+            Natura & paesaggi
+          </label>
 
-			<div class="interest-group">
-			  <label class="checkbox-card">
-				<input type="checkbox" name="accommodation[]" value="Hotel">
-				Hotel
-			  </label>
+          <label class="checkbox-card">
+            <input type="checkbox" name="interest[]" value="Storia & archeologia">
+            Storia & archeologia
+          </label>
 
-			  <label class="checkbox-card">
-				<input type="checkbox" name="accommodation[]" value="Airbnb / Guesthouse">
-				Airbnb / Guesthouse
-			  </label>
-			</div>
-		  </div>
+          <label class="checkbox-card">
+            <input type="checkbox" name="interest[]" value="Pellegrinaggio cristiano">
+            Pellegrinaggio cristiano
+          </label>
 
-		  <!-- Breakfast -->
-<!-- 		  <div style="margin-top: 24px;">
-			<label style="font-weight: 600; display: block; margin-bottom: 12px;">
-			  🍳 Colazione
-			</label>
+          <label class="checkbox-card">
+            <input type="checkbox" name="interest[]" value="Gastronomia">
+            Cucina & tradizioni locali
+          </label>
 
-			<div class="interest-group">
-			  <label class="checkbox-card">
-				<input type="checkbox" name="breakfast[]" value="Con colazione">
-				Con colazione
-			  </label>
+          <label class="checkbox-card">
+            <input type="checkbox" name="interest[]" value="Esperienza completa">
+            Esperienza completa
+          </label>
+        </div>
+      </section>
 
-			  <label class="checkbox-card">
-				<input type="checkbox" name="breakfast[]" value="Senza colazione">
-				Senza colazione
-			  </label>
-			</div>
-		  </div> -->
+      <!-- ✈️ Arrivo / Partenza -->
+      <section class="form-card">
+        <h3>✈️ Arrivo, partenza e alloggio</h3>
 
-		</section>
+        <div class="form-grid">
+          <div class="field">
+            <label>Data di arrivo</label>
+            <input type="date" name="arrival_date" required>
+          </div>
 
+          <div class="field">
+            <label>Orario di arrivo</label>
+            <input type="time" name="arrival_time" required>
+          </div>
 
-		<section class="form-card">
-		  <h3>❤️ Esigenze particolari</h3>
+          <div class="field">
+            <label>Data di partenza</label>
+            <input type="date" name="departure_date" required>
+          </div>
 
-		  <div class="special-needs">
+          <div class="field">
+            <label>Orario di partenza</label>
+            <input type="time" name="departure_time" required>
+          </div>
+        </div>
 
-			  <label class="checkbox-card inline">
-				<input type="checkbox" name="dietary_needs" value="yes">
-				<span>Ho esigenze alimentari (vegetariano, vegano, allergie)</span>
-			  </label>
-			  <label class="checkbox-card inline">
-				<input type="checkbox" name="dietary_needs" value="yes">
-				<span>Ho problemi di salute (non riesco a camminare, esigenze particolari...)</span>
-			  </label>
-			  
-			  
+        <div style="margin-top: 28px;">
+          <label style="font-weight:600;">🏨 Tipo di alloggio preferito</label>
 
-			  <textarea name="dietary_details" placeholder="Scrivici qui eventuali esigenze o richieste speciali (Soprattutto per gli anziani)" rows="3"></textarea>
+          <div class="interest-group">
+            <label class="checkbox-card">
+              <input type="checkbox" name="accommodation[]" value="Hotel">
+              Hotel
+            </label>
 
-			  <label class="form-label">Budget indicativo (opzionale)</label>
-			  <select name="budget" required>
-				<option value="">Seleziona</option>
-				<option>€800 – €1.000</option>
-				<option>€1.000 – €1.300</option>
-				<option>€1.300 – €1.600</option>
-				<option>Flessibile / da definire</option>
-			  </select>
-			</div>
-		</section>
+            <label class="checkbox-card">
+              <input type="checkbox" name="accommodation[]" value="Airbnb / Guesthouse">
+              Airbnb / Guesthouse
+            </label>
+          </div>
+        </div>
+      </section>
 
+      <!-- ❤️ Esigenze -->
+      <section class="form-card">
+        <h3>❤️ Esigenze particolari</h3>
 
-		<div class="form-submit">
+        <div class="special-needs">
 
-		  <p class="form-closing">
-			Ogni viaggio è unico.<br>
-			<strong>Il tuo sarà costruito con cura e rispetto.</strong>
-		  </p>
+          <label class="checkbox-card inline">
+            <input type="checkbox" name="dietary_needs_food" value="yes">
+            Ho esigenze alimentari (vegetariano, vegano, allergie)
+          </label>
 
-		  <button type="submit" class="btn primary btn-submit">
-			Invia la richiesta
-		  </button>
+          <label class="checkbox-card inline">
+            <input type="checkbox" name="dietary_needs_health" value="yes">
+            Ho problemi di salute / mobilità
+          </label>
 
-		  <p class="form-note">
-			Ti risponderemo personalmente entro 48 ore.
-		  </p>
+          <textarea name="special_requests"
+                    placeholder="Scrivici qui eventuali esigenze o richieste speciali"
+                    rows="3"></textarea>
 
-		</div>
+          <label>Budget indicativo</label>
+          <select name="budget">
+            <option value="">Seleziona</option>
+            <option>€800 – €1.000</option>
+            <option>€1.000 – €1.300</option>
+            <option>€1.300 – €1.600</option>
+            <option>Flessibile / da definire</option>
+          </select>
 
-	</div>
+        </div>
+      </section>
+
+      <!-- SUBMIT -->
+      <div class="form-submit">
+        <p class="form-closing">
+          Ogni viaggio è unico.<br>
+          <strong>Il tuo sarà costruito con cura e rispetto.</strong>
+        </p>
+
+        <button type="submit" class="btn primary btn-submit">
+          Invia la richiesta
+        </button>
+
+        <p class="form-note">
+          Ti risponderemo personalmente entro 48 ore.
+        </p>
+      </div>
+
+    </form>
+    <!-- NETLIFY FORM END -->
+
+  </div>
 </section>
 
 

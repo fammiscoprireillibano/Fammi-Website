@@ -1,0 +1,352 @@
+input[type="date"],
+input[type="time"] {
+  background: white;
+  cursor: pointer;
+}
+
+.contact-hero {
+	background: 
+	linear-gradient(to right, rgba(244, 226, 200, 0.85), rgba(255, 255, 255, 0.85)),
+	url("../img/tours/kefraya.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	padding: 110px 0 70px;
+	text-align: center;
+	box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 
+	            4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+	padding: 110px 0 70px;
+	text-align: center;
+}
+
+.contact-hero p{
+	color: var(--header-green-light);
+}
+
+.contact-options {
+  background: var(--sand-soft);
+  padding: 60px 0;
+  margin-bottom: 0;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-options .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.contact-card {
+  background: white;
+  padding: 28px;
+  border-radius: 22px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  color: var(--header-green-light);
+  border-top: 4px solid var(--green-primary);
+}
+
+.email{
+	color: var(--green-primary);
+}
+
+.contact-card img {
+  width: 24px;
+  height: 24px;
+}
+
+
+/* SOCIAL MEDIA */
+.contact-social-div{
+	padding: 24px 0;
+	margin-top: 0;
+	background: linear-gradient(to right, var(--green-soft), var(--paper-white));
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 4px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-social {
+  text-align: center;
+}
+
+.contact-social p {
+  font-weight: 600;
+  color: var(--header-green-light);
+  padding-top: 30px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  padding-bottom: 20px;
+}
+
+.social-icons img {
+  width: 34px;
+  height: 34px;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+/* FIX INFO LIST */
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto 0;
+  display: inline-block;   /* key: centers the block */
+  text-align: left;        /* keeps text readable */
+}
+
+.info-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: var(--text-main);
+}
+
+.info-list .icon {
+  font-size: 18px;
+  width: 22px;
+  text-align: center;
+}
+
+/* Form */
+.form-container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 16px;
+  color: var(--header-green-light);
+}
+
+.form-container p {
+	text-align: center;
+	color: var(--green-primary);
+}
+
+.form-container p hint{
+	color: var(--header-green-light);
+}
+
+.form-card {
+  color: var(--header-green-light);
+  background: var(--paper-white);
+  border-radius: 26px;
+  padding: 32px;
+  margin-bottom: 40px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+}
+
+.form-card h3 {
+  margin-bottom: 20px;
+  color: var(--header-green-light);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-wrapper {
+  background: var(--sand-soft);
+  padding: 60px 0;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+}
+
+.field label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--green-primary);
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+/* Checkbox grid */
+.interest-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px 24px;
+  margin-top: 16px;
+}
+
+/* Checkbox card */
+.checkbox-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background: #ffffff;
+  border-radius: 14px;
+  border: 2px solid #e5e7eb;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+/* Hide default checkbox */
+.checkbox-card input {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #9ca3af;
+  border-radius: 4px;
+  display: grid;
+  place-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Checkmark */
+.checkbox-card input::before {
+  content: "✓";
+  font-size: 14px;
+  color: white;
+  transform: scale(0);
+  transition: transform 0.15s ease;
+}
+
+/* Checked state */
+.checkbox-card input:checked {
+  background: var(--green-primary);
+  border-color: var(--green-primary);
+}
+
+.checkbox-card input:checked::before {
+  transform: scale(1);
+}
+
+/* Hover & focus */
+.checkbox-card:hover {
+  border-color: var(--green-primary);
+  background: var(--green-soft);
+}
+
+.checkbox-card input:focus-visible {
+  outline: 2px solid var(--green-primary);
+  outline-offset: 2px;
+}
+
+/* Inline checkbox variant */
+.checkbox-card.inline {
+  grid-column: 1 / -1;
+  justify-content: flex-start;
+  font-weight: 500;
+}
+
+/* Special needs block spacing */
+.special-needs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Improve textarea look */
+.special-needs textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1.5px solid #e5e7eb;
+  font-size: 15px;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.special-needs textarea:focus {
+  outline: none;
+  border-color: var(--green-primary);
+  box-shadow: 0 0 0 3px rgba(15,143,79,0.15);
+}
+
+/* Select styling (optional polish) */
+.special-needs select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1.5px solid #e5e7eb;
+  font-size: 15px;
+  background: white;
+}
+
+.special-needs select:focus {
+  outline: none;
+  border-color: var(--green-primary);
+  box-shadow: 0 0 0 3px rgba(15,143,79,0.15);
+}
+
+
+/* Final submit section */
+.form-submit {
+  margin-top: 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Closing text */
+.form-closing {
+  font-size: 18px;
+  color: var(--green-dark);
+  line-height: 1.6;
+}
+
+/* Submit button */
+.btn-submit {
+  min-width: 260px;
+  padding: 14px 32px;
+  font-size: 16px;
+}
+
+/* Support note */
+.form-note {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .contact-options .container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+    .interest-group {
+    grid-template-columns: 1fr;
+  }
+
+}
+
